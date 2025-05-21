@@ -1,41 +1,66 @@
 import React from 'react';
 import './AboutMe.css';
 
+const profileInfo = {
+  name: 'Ta Anh Luan',
+  title: 'Product Owner & Web Consultant',
+  summary:
+    'With over a decade of experience in the financial and digital sectors, I specialize in bridging the gap between business goals and tech implementation. I’ve worked with global teams in Switzerland, France, Japan, Singapore, and Vietnam—bringing agile leadership, product strategy, and delivery excellence.',
+  bio: 'Passionate about turning ideas into reality through powerful product strategy and seamless user experiences.',
+  contacts: [
+    { label: 'Birthday', value: '04 Feb 1992' },
+    { label: 'Website', value: 'jonathanta.info', link: 'https://jonathanta.info' },
+    { label: 'Phone', value: '+84 939 451 139' },
+    { label: 'City', value: 'Ho Chi Minh City, Vietnam' },
+    { label: 'Age', value: '32' },
+    { label: 'Degree', value: 'Bachelor in IT (Network Engineering)' },
+    { label: 'Email', value: 'taanhluan@gmail.com', mail: true },
+    { label: 'Freelance', value: 'Available' },
+  ],
+  stats: [
+    { icon: 'far fa-smile', value: '20+', label: 'Clients & Projects' },
+    { icon: 'fas fa-tasks', value: '50+', label: 'Product Features Delivered' },
+    { icon: 'fas fa-headset', value: '3000+', label: 'Consulting Hours' },
+    { icon: 'fas fa-users', value: '15+', label: 'Teams Supported' },
+  ],
+  image: 'https://raw.githubusercontent.com/taanhluan/JonathanTa/main/assets/images/Avtn.jpg',
+};
+
 const AboutMe: React.FC = () => {
+  const leftList = profileInfo.contacts.slice(0, 4);
+  const rightList = profileInfo.contacts.slice(4);
+
   return (
-    <div className="about-container">
-      <h2 className="section-title">About</h2>
-      <p className="intro-text">
-        I’m a Product Owner and Senior Business Analyst with over 10 years of experience in the financial, banking, insurance, and digital transformation industries. I’ve collaborated with international teams in Switzerland, France, Japan, Singapore, and Vietnam. I'm fluent in Agile/Scrum, Hybrid, and enterprise delivery models.
-      </p>
+    <section className="about-container" aria-labelledby="about-title">
+      <h2 className="section-title" id="about-title">About</h2>
+      <p className="intro-text">{profileInfo.summary}</p>
 
       <div className="about-content">
         <div className="about-image">
-          <img
-            src="https://raw.githubusercontent.com/taanhluan/JonathanTa/main/assets/images/Avtn.jpg"
-            alt="Ta Anh Luan"
-          />
+          <img src={profileInfo.image} alt={profileInfo.name} />
         </div>
 
         <div className="about-info">
-          <h3>Product Owner & Web Consultant</h3>
-          <p className="highlight">
-            Passionate about turning ideas into reality through powerful product strategy and seamless user experiences.
-          </p>
+          <h3>{profileInfo.title}</h3>
+          <p className="highlight">{profileInfo.bio}</p>
 
           <div className="info-grid">
-            <ul>
-              <li><strong>Birthday:</strong> 04 Feb 1992</li>
-              <li><strong>Website:</strong> <a href="https://jonathanta.info" target="_blank" rel="noreferrer">jonathanta.info</a></li>
-              <li><strong>Phone:</strong> +84 939 451 139</li>
-              <li><strong>City:</strong> Ho Chi Minh City, Vietnam</li>
-            </ul>
-            <ul>
-              <li><strong>Age:</strong> 32</li>
-              <li><strong>Degree:</strong> Bachelor in IT (Network Engineering)</li>
-              <li><strong>Email:</strong> taanhluan@gmail.com</li>
-              <li><strong>Freelance:</strong> Available</li>
-            </ul>
+            {[leftList, rightList].map((list, idx) => (
+              <ul key={idx}>
+                {list.map((item, i) => (
+                  <li key={i}>
+                    <strong>{item.label}:</strong>{' '}
+                    {item.link ? (
+                      <a href={item.link} target="_blank" rel="noopener noreferrer">{item.value}</a>
+                    ) : item.mail ? (
+                      <a href={`mailto:${item.value}`}>{item.value}</a>
+                    ) : (
+                      item.value
+                    )}
+                  </li>
+                ))}
+              </ul>
+            ))}
           </div>
 
           <p className="desc">
@@ -45,28 +70,15 @@ const AboutMe: React.FC = () => {
       </div>
 
       <div className="about-stats">
-        <div className="stat-box">
-          <i className="far fa-smile"></i>
-          <h3>20+</h3>
-          <p>Clients & Projects</p>
-        </div>
-        <div className="stat-box">
-          <i className="fas fa-tasks"></i>
-          <h3>50+</h3>
-          <p>Product Features Delivered</p>
-        </div>
-        <div className="stat-box">
-          <i className="fas fa-headset"></i>
-          <h3>3000+</h3>
-          <p>Consulting Hours</p>
-        </div>
-        <div className="stat-box">
-          <i className="fas fa-users"></i>
-          <h3>15+</h3>
-          <p>Teams Supported</p>
-        </div>
+        {profileInfo.stats.map((stat, index) => (
+          <div className="stat-box" key={index} aria-label={stat.label}>
+            <i className={stat.icon} aria-hidden="true"></i>
+            <h3>{stat.value}</h3>
+            <p>{stat.label}</p>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

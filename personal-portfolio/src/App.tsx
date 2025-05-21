@@ -7,14 +7,14 @@ import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
-import './App.css'; // nếu bạn muốn đưa CSS tách ra file
+import './App.css';
 
 const App: React.FC = () => {
   return (
     <Router>
       <div className="app-container">
         <Sidebar />
-        <div className="main-content">
+        <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
@@ -23,7 +23,7 @@ const App: React.FC = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </div>
+        </main>
       </div>
     </Router>
   );
