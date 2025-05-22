@@ -3,19 +3,34 @@ import './Portfolio.css';
 
 const projects = [
   {
-    title: 'Fintech App – Migros Bank',
-    description: 'A digital banking platform including affordability simulation, ZEK credit check API, and document verification.',
-    image: 'https://via.placeholder.com/400x200?text=Migros+Bank'
+    title: 'GTV Vietnam – Corporate & Retail Digital Banking',
+    description:
+      'Led product strategy and AML integration across T24 & Backbase platforms for both corporate and retail banking users.',
+    image: 'https://via.placeholder.com/400x200?text=GTV+Vietnam'
   },
   {
-    title: 'Retail Banking Portal – BIC Bank',
-    description: 'Led the digital channel revamp with AML screening, payment hub, and KPI monitoring.',
-    image: 'https://via.placeholder.com/400x200?text=BIC+Bank'
+    title: 'Axon Active – Mortgage Lending Platform (Migros Bank)',
+    description:
+      'Defined end-to-end digital mortgage lending workflows including ZEK integration, affordability simulation, and document handling.',
+    image: 'https://via.placeholder.com/400x200?text=Axon+Active'
   },
   {
-    title: 'Insurance CRM – Amaris',
-    description: 'Cross-market policy tracking system with automated workflows and UAT coordination.',
-    image: 'https://via.placeholder.com/400x200?text=Amaris+CRM'
+    title: 'BIC Bank Cambodia – Retail Digital Channel Revamp',
+    description:
+      'Delivered a modern AML screening solution, centralized payment hub, and KPI dashboard for digital retail banking operations.',
+    image: 'https://via.placeholder.com/400x200?text=BIC+Bank+Cambodia'
+  },
+  {
+    title: 'Home Credit & FeCredit – Consumer Finance Solutions',
+    description:
+      'Worked on loan origination systems, collections strategies, and decisioning platform enhancements using PEGA and Loxon.',
+    image: 'https://via.placeholder.com/400x200?text=Home+Credit+FeCredit'
+  },
+  {
+    title: 'ABBank – Core Banking & Backbase UX Redesign',
+    description:
+      'Integrated payment gateway with Backbase, optimized onboarding processes, and improved customer lifecycle UX flows.',
+    image: 'https://via.placeholder.com/400x200?text=ABBank'
   }
 ];
 
@@ -27,8 +42,10 @@ const Portfolio: React.FC = () => {
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
             <img src={project.image} alt={project.title} className="project-image" />
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            <div className="project-info">
+              <h3 className="project-title">{project.title}</h3>
+              <p className="project-description">{project.description}</p>
+            </div>
           </div>
         ))}
       </div>

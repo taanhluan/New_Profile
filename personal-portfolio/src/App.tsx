@@ -13,7 +13,16 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="app-container">
-        <Sidebar />
+        <Sidebar
+          name="Alex Smith"
+          avatarUrl="https://i.pravatar.cc/100"
+          socialLinks={{
+            facebook: 'https://facebook.com/alex',
+            instagram: 'https://instagram.com/alex',
+            github: 'https://github.com/alex',
+            linkedin: 'https://linkedin.com/in/alex',
+          }}
+        />
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
