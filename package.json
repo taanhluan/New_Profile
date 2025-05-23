@@ -2,19 +2,23 @@
   "name": "personal-portfolio",
   "version": "1.0.0",
   "description": "A personal portfolio to showcase projects and skills.",
+  "homepage": "https://jonathanta.info",
   "main": "src/index.tsx",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "node deploy.js"
+    
   },
   "keywords": [
     "portfolio",
     "react",
     "typescript"
   ],
-  "author": "Your Name",
+  "author": "Jonathan Ta",
   "license": "MIT",
   "dependencies": {
     "classnames": "^2.5.1",

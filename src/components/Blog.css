@@ -4,16 +4,14 @@
   padding: 40px 20px;
   color: #f5f5f5;
   font-family: 'Inter', sans-serif;
-  background-color: #121212; /* Slightly darker background for contrast */
 }
 
 .section-title {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: bold;
   border-bottom: 3px solid #f97316;
   display: inline-block;
   margin-bottom: 30px;
-  color: #f5f5f5;
 }
 
 .blog-list {
@@ -26,18 +24,12 @@
   background: #1e1e1e;
   padding: 24px;
   border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer; /* Indicate interactivity */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-.blog-card:focus,
 .blog-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-  outline: none; /* Remove default focus outline */
-  /* Optionally add a custom focus ring for accessibility */
-  box-shadow: 0 0 0 3px #f97316, 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 .blog-card h3 {
@@ -50,12 +42,4 @@
   font-size: 14px;
   color: #aaa;
   margin-bottom: 12px;
-  display: block;
-  font-style: italic;
-}
-
-.blog-summary {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #ddd;
 }
