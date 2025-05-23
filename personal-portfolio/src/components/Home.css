@@ -1,0 +1,179 @@
+/* ===== Hero Section Layout ===== */
+.home-hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #161616, #222222);
+  background-size: 200% 200%;
+  animation: backgroundMotion 10s ease infinite;
+  color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+@keyframes backgroundMotion {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Container Flex ===== */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+/* ===== Text Section ===== */
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.typing-text {
+  font-size: 2rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  font-weight: 700;
+  color: #fefefe;
+  min-height: 200px;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #f97316, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 6s ease-in-out infinite;
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Gạch nháy | ===== */
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.5em;
+  background-color: #f97316;
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+/* ===== Social Links ===== */
+.social-links {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  padding: 12px 26px;
+  background: linear-gradient(135deg, #1e1e1e, #292929);
+  border-radius: 28px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #e5e5e5;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.35s ease;
+  position: relative;
+  backdrop-filter: blur(6px);
+  border: 1px solid transparent;
+}
+
+.social-links a::after {
+  content: '↗';
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: linear-gradient(135deg, #f97316, #c084fc);
+  color: #ffffff;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-links a:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== Avatar Section ===== */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 50%;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  border: 4px solid transparent;
+  background-color: #ffffff;
+  background-image: linear-gradient(#fff, #fff),
+                    linear-gradient(135deg, #f97316, #c084fc);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== Responsive Fixes ===== */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .typing-text {
+    font-size: 1.6rem;
+  }
+
+  .social-links a {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+}

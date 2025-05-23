@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.sidebar {
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    width: 250px;
+    float: left;
+}
+
+.main-content {
+    float: right;
+    width: calc(100% - 250px);
+    padding: 15px;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+}
