@@ -1,18 +1,33 @@
+/* Sidebar Container */
 .sidebar {
   width: 250px;
-  background: linear-gradient(145deg, #1e293b, #0f172a);
-  color: white;
+  background: linear-gradient(135deg, #0f172a, #1e1b4b); /* nền tím đậm mặc định */
+  color: var(--menu-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 25px 15px;
   position: fixed;
   height: 100vh;
-  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease-in-out;
   z-index: 100;
+  animation: fadeInSidebar 0.5s ease-in-out;
+  box-sizing: border-box;
 }
 
+@keyframes fadeInSidebar {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Avatar */
 .avatar-box {
   text-align: center;
   margin-bottom: 40px;
@@ -20,35 +35,47 @@
 
 .avatar {
   border-radius: 50%;
-  width: 110px;
-  height: 110px;
-  border: 3px solid #60a5fa; /* blue-400 */
+  width: 100px;
+  height: 100px;
+  border: 3px solid var(--hover-bg);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
   margin-bottom: 10px;
-  transition: transform 0.3s;
-}
-.avatar:hover {
-  transform: scale(1.05);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px var(--hover-to);
+}
+
+/* Name */
 h2 {
   font-size: 1.2rem;
   margin: 8px 0;
+  color: var(--menu-color);
 }
 
+/* Social Icons */
 .social-icons a {
   margin: 0 6px;
-  color: #cbd5e1;
+  color: var(--icon-color);
   font-size: 1.2rem;
-  transition: color 0.3s;
-}
-.social-icons a:hover {
-  color: #60a5fa;
+  transition: transform 0.3s, color 0.3s;
 }
 
+.social-icons a:hover {
+  color: var(--hover-to);
+  transform: scale(1.2);
+}
+
+/* Navigation Menu */
 .nav-menu {
+  flex-grow: 1; /* chiếm hết khoảng trống có thể */
   width: 100%;
   list-style: none;
   padding: 0;
+  margin: 0;
+  overflow-y: auto; /* scroll nếu menu dài */
 }
 
 .nav-menu li {
@@ -59,25 +86,71 @@ h2 {
 .nav-menu li a {
   display: flex;
   align-items: center;
-  color: #cbd5e1;
+  color: var(--menu-color);
   text-decoration: none;
-  padding: 12px 16px;
-  border-radius: 8px;
-  transition: background 0.3s, color 0.3s;
+  padding: 12px 18px;
+  border-radius: 12px;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  font-weight: 500;
 }
 
 .nav-menu li a i {
   margin-right: 12px;
   font-size: 1.1rem;
+  color: var(--icon-color);
 }
 
+/* Active & Hover */
 .nav-menu li.active a,
 .nav-menu li a:hover {
-  background-color: #60a5fa;
-  color: #0f172a;
+  background: linear-gradient(135deg, var(--hover-bg), var(--hover-to));
+  color: var(--hover-text);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
+  transform: translateX(4px);
 }
 
-/* Responsive */
+.nav-menu li.active a i,
+.nav-menu li a:hover i {
+  color: var(--hover-text);
+}
+
+/* Dropdown theme toggle nằm dưới cùng sidebar */
+.theme-toggle {
+  width: 100%;
+  margin-top: auto; /* đẩy xuống đáy sidebar */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center; /* căn giữa dropdown */
+}
+
+/* Style dropdown */
+.theme-select {
+  width: 60%; /* nhỏ lại cho gọn */
+  max-width: 220px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: var(--menu-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+  transition: border 0.3s ease;
+  box-sizing: border-box;
+}
+
+.theme-select:hover {
+  border-color: var(--hover-to);
+}
+
+.theme-select option {
+  background: #0f172a;
+  color: var(--menu-color);
+}
+
+/* Responsive for mobile */
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
@@ -88,7 +161,8 @@ h2 {
     bottom: 0;
     top: auto;
     left: 0;
-    background: #1e293b;
+    background: #1e1b4b;
+    border-top: 1px solid #4c1d95;
   }
 
   .avatar-box {
@@ -100,6 +174,8 @@ h2 {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+    flex-grow: 0;
+    overflow: visible;
   }
 
   .nav-menu li {
@@ -115,9 +191,15 @@ h2 {
 
   .nav-menu li a i {
     margin: 0;
+    font-size: 1.2rem;
   }
 
   .nav-menu li a span {
     margin-top: 3px;
+  }
+
+  /* Ẩn dropdown ở mobile hoặc bạn có thể tùy chỉnh nếu muốn hiển thị */
+  .theme-toggle {
+    display: none;
   }
 }

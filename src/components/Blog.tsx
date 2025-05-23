@@ -1,7 +1,13 @@
 import React from 'react';
 import './Blog.css';
 
-const blogPosts = [
+interface BlogPost {
+  title: string;
+  date: string;
+  summary: string;
+}
+
+const blogPosts: BlogPost[] = [
   {
     title: 'Navigating Digital Banking Projects',
     date: 'May 10, 2025',
@@ -21,15 +27,19 @@ const blogPosts = [
 
 const Blog: React.FC = () => {
   return (
-    <section className="blog">
-      <h2 className="section-title">Blog</h2>
+    <section className="blog" aria-labelledby="blog-section-title">
+      <h2 id="blog-section-title" className="section-title">
+        Blog
+      </h2>
       <div className="blog-list">
-        {blogPosts.map((post, index) => (
-          <div className="blog-card" key={index}>
-            <h3>{post.title}</h3>
-            <p className="blog-date">{post.date}</p>
-            <p>{post.summary}</p>
-          </div>
+        {blogPosts.map(({ title, date, summary }, index) => (
+          <article className="blog-card" key={index} tabIndex={0} aria-label={`Blog post titled ${title}`}>
+            <h3 className="blog-card-title">{title}</h3>
+            <time className="blog-date" dateTime={new Date(date).toISOString()}>
+              {date}
+            </time>
+            <p className="blog-summary">{summary}</p>
+          </article>
         ))}
       </div>
     </section>

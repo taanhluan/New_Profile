@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 import './Sidebar.css';
+import ThemeToggle from '../ThemeToggle';
 
 interface MenuItem {
   name: string;
@@ -10,9 +11,9 @@ interface MenuItem {
 }
 
 interface SidebarProps {
-  name?: string;
-  avatarUrl?: string;
-  socialLinks?: {
+  name: string;
+  avatarUrl: string;
+  socialLinks: {
     facebook?: string;
     instagram?: string;
     github?: string;
@@ -29,24 +30,20 @@ const menuItems: MenuItem[] = [
   { name: 'Contact', path: '/contact', icon: 'fa-envelope' },
 ];
 
-const Sidebar: React.FC<SidebarProps> = ({
-  name = 'Alex Smith',
-  avatarUrl = 'https://i.pravatar.cc/100',
-  socialLinks = {},
-}) => {
+const Sidebar: React.FC<SidebarProps> = ({ name, avatarUrl, socialLinks }) => {
   const location = useLocation();
 
-  const renderSocialIcon = (platform: string, url?: string) => {
+  const renderSocialIcon = (iconClass: string, url?: string) => {
     if (!url) return null;
     return (
       <a
-        key={platform}
+        key={iconClass}
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={platform}
+        aria-label={iconClass}
       >
-        <i className={`fab fa-${platform}`}></i>
+        <i className={`fab ${iconClass}`}></i>
       </a>
     );
   };
@@ -57,10 +54,10 @@ const Sidebar: React.FC<SidebarProps> = ({
         <img src={avatarUrl} alt={`${name} avatar`} className="avatar" />
         <h2>{name}</h2>
         <div className="social-icons">
-          {renderSocialIcon('facebook-f', socialLinks.facebook)}
-          {renderSocialIcon('instagram', socialLinks.instagram)}
-          {renderSocialIcon('github', socialLinks.github)}
-          {renderSocialIcon('linkedin-in', socialLinks.linkedin)}
+          {renderSocialIcon('fa-facebook-f', socialLinks.facebook)}
+          {renderSocialIcon('fa-instagram', socialLinks.instagram)}
+          {renderSocialIcon('fa-github', socialLinks.github)}
+          {renderSocialIcon('fa-linkedin-in', socialLinks.linkedin)}
         </div>
       </div>
 
@@ -68,9 +65,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         {menuItems.map((item) => (
           <li
             key={item.path}
-            className={classNames({
-              active: location.pathname.startsWith(item.path),
-            })}
+            className={classNames({ active: location.pathname === item.path })}
           >
             <Link to={item.path}>
               <i className={`fas ${item.icon}`}></i>
@@ -79,6 +74,9 @@ const Sidebar: React.FC<SidebarProps> = ({
           </li>
         ))}
       </ul>
+
+      {/* Dropdown đổi giao diện nằm cuối cùng và căn giữa */}
+      <ThemeToggle />
     </div>
   );
 };
