@@ -1,6 +1,7 @@
 {
   "name": "personal-portfolio",
   "version": "1.0.0",
+  "homepage": "https://jonathanta.info",
   "description": "A personal portfolio to showcase projects and skills.",
   "main": "src/index.tsx",
   "scripts": {
