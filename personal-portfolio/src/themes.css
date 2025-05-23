@@ -1,0 +1,51 @@
+/* Default values */
+:root {
+  --menu-color: #f1f5f9;
+  --icon-color: #f1f5f9;
+  --hover-bg: #fb923c;
+  --hover-to: #f472b6;
+  --hover-text: #0f0f0f;
+
+  /* Thêm mặc định background và text */
+  --bg-color: #121212;
+  --text-color: #eaeaea;
+}
+
+/* Cam–Hồng */
+.theme-pinkOrange {
+  --menu-color: #f1f5f9;
+  --icon-color: #f1f5f9;
+  --hover-bg: #fb923c;
+  --hover-to: #f472b6;
+  --hover-text: #0f0f0f;
+
+  /* Màu nền và chữ cho theme này */
+  --bg-color: #121212;   /* nền tối nhẹ */
+  --text-color: #eaeaea; /* chữ sáng */
+}
+
+/* Hồng–Tím Neon */
+.theme-purplePink {
+  --menu-color: #f9a8d4;
+  --icon-color: #f9a8d4;
+  --hover-bg: #f472b6;
+  --hover-to: #c084fc;
+  --hover-text: #0f0f0f;
+
+  /* Màu nền và chữ cho theme này */
+  --bg-color: #1a1a2e;   /* tím đậm */
+  --text-color: #f3e5f5; /* chữ hồng nhạt */
+}
+
+/* Vàng–Tím Neon */
+.theme-yellowPurple {
+  --menu-color: #fde68a;
+  --icon-color: #fde68a;
+  --hover-bg: #facc15;
+  --hover-to: #a855f7;
+  --hover-text: #0f0f0f;
+
+  /* Màu nền và chữ cho theme này */
+  --bg-color: #1f1f2e;   /* tím xanh đậm */
+  --text-color: #fff9db; /* chữ vàng nhạt */
+}
