@@ -4,28 +4,97 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0f0f0f;
+  background-color: var(--bg-color);
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
 }
 
-/* Container for full layout */
+/* Layout Container */
 .app-container {
   display: flex;
   min-height: 100vh;
-  background-color: #0f0f0f;
+  background-color: var(--bg-color);
+  transition: filter 0.3s ease;
 }
 
-/* Main content beside sidebar */
+/* Sidebar */
+.sidebar {
+  transition: transform 0.3s ease;
+  background-color: var(--hover-bg);
+  color: var(--menu-color);
+}
+
+/* Main content */
 .main-content {
-  margin-left: 250px; /* Adjust to Sidebar width */
+  margin-left: 250px;
   flex: 1;
   padding: 40px;
   overflow-y: auto;
-  color: #fff;
+  color: var(--text-color);
+  transition: margin 0.3s ease;
+  position: relative;
+  z-index: 1;
+  background-color: var(--bg-color);
 }
 
-/* Optional: Hide scrollbar for a cleaner look */
+/* Hide scrollbar for cleaner look */
 .main-content::-webkit-scrollbar {
   width: 0;
   background: transparent;
+}
+.main-content {
+  scrollbar-width: none;
+}
+
+/* Hamburger for mobile */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 18px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--hover-to);
+  z-index: 200;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.hamburger:hover {
+  transform: scale(1.2);
+}
+
+/* Mobile sidebar behavior */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    transform: translateX(-100%);
+    z-index: 150;
+  }
+
+  .sidebar-open .sidebar {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 60px;
+    padding: 20px;
+  }
+
+  .sidebar-open .main-content {
+    filter: brightness(0.6);
+    pointer-events: none;
+  }
 }
