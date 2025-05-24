@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
 
-const fullText = `Hello, I’m Jonathan Ta
-Product Owner & Digital Consultant
-Based in Vietnam. I specialize in building scalable digital products, banking systems, and strategy-driven UX solutions.`;
+const fullText = `Hello, I am Jonathan Ta,
+a Product Owner and Digital Consultant based in Vietnam. I specialize in leading the development of scalable digital products and complex banking systems, delivering strategy-driven user experience solutions that align with organizational objectives and drive business growth.`;
 
 const Home: React.FC = () => {
   const [text, setText] = useState('');
@@ -27,11 +26,7 @@ const Home: React.FC = () => {
             {text}
             <span className="cursor">|</span>
           </div>
-          <div className="social-links">
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-          </div>
+          
         </div>
 
         <div className="hero-image">
