@@ -1,7 +1,17 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-// Export kiểu ThemeType để import bên ngoài
-export type ThemeType = 'pinkOrange' | 'purplePink' | 'yellowPurple';
+export type ThemeType =
+  | 'pinkOrange'
+  | 'purplePink'
+  | 'yellowPurple'
+  | 'darkCherry'
+  | 'neonMatrix'
+  | 'sunsetPeach'
+  | 'cyberGold'
+  | 'forestNight'
+  | 'blushRose'
+  | 'aquaDream'
+  | 'midnightInk';
 
 const ThemeContext = createContext<{
   theme: ThemeType;
@@ -13,9 +23,19 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   useEffect(() => {
     const body = document.body;
-    // Xóa tất cả class theme cũ
-    body.classList.remove('theme-pinkOrange', 'theme-purplePink', 'theme-yellowPurple');
-    // Thêm class theme mới
+    body.classList.remove(
+      'theme-pinkOrange',
+      'theme-purplePink',
+      'theme-yellowPurple',
+      'theme-darkCherry',
+      'theme-neonMatrix',
+      'theme-sunsetPeach',
+      'theme-cyberGold',
+      'theme-forestNight',
+      'theme-blushRose',
+      'theme-aquaDream',
+      'theme-midnightInk'
+    );
     body.classList.add(`theme-${theme}`);
 
     return () => {
@@ -30,5 +50,4 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   );
 };
 
-// Hook tiện lợi để dùng context
 export const useTheme = () => useContext(ThemeContext);

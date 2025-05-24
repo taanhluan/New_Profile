@@ -12,19 +12,22 @@ html, body {
   color: var(--text-color);
 }
 
-/* Layout Container */
+/* App container */
 .app-container {
   display: flex;
   min-height: 100vh;
   background-color: var(--bg-color);
   transition: filter 0.3s ease;
+  position: relative;
 }
 
-/* Sidebar */
+/* Sidebar base (desktop) */
 .sidebar {
+  width: 250px;
   transition: transform 0.3s ease;
   background-color: var(--hover-bg);
   color: var(--menu-color);
+  z-index: 100;
 }
 
 /* Main content */
@@ -37,7 +40,7 @@ html, body {
   transition: margin 0.3s ease;
   position: relative;
   z-index: 1;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color); /* GIỮ NGUYÊN DÒNG NÀY */
 }
 
 /* Hide scrollbar for cleaner look */
@@ -67,33 +70,32 @@ html, body {
   transform: scale(1.2);
 }
 
-/* Mobile sidebar behavior */
+/* Mobile view */
 @media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
   .hamburger {
     display: block;
   }
 
-  .sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 250px;
-    transform: translateX(-100%);
-    z-index: 150;
-  }
-
-  .sidebar-open .sidebar {
+  .app-container.sidebar-open .sidebar {
     transform: translateX(0);
   }
 
   .main-content {
     margin-left: 0;
-    margin-top: 60px;
     padding: 20px;
+    margin-top: 60px;
   }
 
-  .sidebar-open .main-content {
+  .app-container.sidebar-open .main-content {
     filter: brightness(0.6);
     pointer-events: none;
   }

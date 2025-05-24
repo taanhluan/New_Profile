@@ -5,7 +5,6 @@
   margin: 0 auto;
   color: #f5f5f5;
   font-family: 'Inter', 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #121212, #181818);
   animation: fadeInBody 0.8s ease-in-out;
 }
 

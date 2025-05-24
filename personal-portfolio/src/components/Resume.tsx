@@ -56,31 +56,33 @@ const experiences = [
 
 const Resume: React.FC = () => {
   return (
-    <div className="resume-container">
-      <h2 className="section-title">Career Roadmap</h2>
-      <div className="resume-section">
-        <h3 className="resume-subtitle">Experience</h3>
-        <div className="timeline">
-          {experiences.map((exp, idx) => (
-            <div
-              className="timeline-item"
-              key={idx}
-              style={{
-                transform: `translateX(${idx % 2 === 0 ? '-20px' : '20px'})`,
-                animationDelay: `${idx * 0.1}s`,
-              }}
-            >
-              <div className="timeline-date">{exp.date}</div>
-              <div className="timeline-content">
-                <h4>{exp.title}</h4>
-                <p>{exp.desc}</p>
+    <section className="resume-page">
+      <div className="resume-container">
+        <h2 className="section-title">Career Roadmap</h2>
+        <div className="resume-section">
+          <h3 className="resume-subtitle">Experience</h3>
+          <div className="timeline">
+            {experiences.map((exp, idx) => (
+              <div
+                className="timeline-item"
+                key={idx}
+                style={{
+                  transform: `translateX(${idx % 2 === 0 ? '-20px' : '20px'})`,
+                  animationDelay: `${idx * 0.1}s`,
+                }}
+              >
+                <div className="timeline-date">{exp.date}</div>
+                <div className="timeline-content">
+                  <h4>{exp.title}</h4>
+                  <p>{exp.desc}</p>
+                </div>
               </div>
-            </div>
-          ))}
-          <div className="roadmap-path"></div>
+            ))}
+            <div className="roadmap-path"></div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

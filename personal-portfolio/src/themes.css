@@ -1,51 +1,131 @@
-/* Default values */
 :root {
   --menu-color: #f1f5f9;
   --icon-color: #f1f5f9;
   --hover-bg: #fb923c;
   --hover-to: #f472b6;
   --hover-text: #0f0f0f;
-
-  /* Thêm mặc định background và text */
   --bg-color: #121212;
   --text-color: #eaeaea;
+  --card-bg: #1e1e1e;
 }
 
-/* Cam–Hồng */
 .theme-pinkOrange {
   --menu-color: #f1f5f9;
   --icon-color: #f1f5f9;
   --hover-bg: #fb923c;
   --hover-to: #f472b6;
   --hover-text: #0f0f0f;
-
-  /* Màu nền và chữ cho theme này */
-  --bg-color: #121212;   /* nền tối nhẹ */
-  --text-color: #eaeaea; /* chữ sáng */
+  --bg-color: #121212;
+  --text-color: #eaeaea;
+  --card-bg: #1e1e1e;
 }
 
-/* Hồng–Tím Neon */
 .theme-purplePink {
   --menu-color: #f9a8d4;
   --icon-color: #f9a8d4;
   --hover-bg: #f472b6;
   --hover-to: #c084fc;
   --hover-text: #0f0f0f;
-
-  /* Màu nền và chữ cho theme này */
-  --bg-color: #1a1a2e;   /* tím đậm */
-  --text-color: #f3e5f5; /* chữ hồng nhạt */
+  --bg-color: #1a1a2e;
+  --text-color: #f3e5f5;
+  --card-bg: #23192e;
 }
 
-/* Vàng–Tím Neon */
 .theme-yellowPurple {
   --menu-color: #fde68a;
   --icon-color: #fde68a;
   --hover-bg: #facc15;
   --hover-to: #a855f7;
   --hover-text: #0f0f0f;
+  --bg-color: #1f1f2e;
+  --text-color: #fff9db;
+  --card-bg: #2a243c;
+}
 
-  /* Màu nền và chữ cho theme này */
-  --bg-color: #1f1f2e;   /* tím xanh đậm */
-  --text-color: #fff9db; /* chữ vàng nhạt */
+.theme-darkCherry {
+  --menu-color: #fddde6;
+  --icon-color: #fecdd3;
+  --hover-bg: #9f1239;
+  --hover-to: #6b021c;
+  --hover-text: #fff;
+  --bg-color: #1c0a10;
+  --text-color: #fef2f4;
+  --card-bg: #2a0f1b;
+}
+
+.theme-neonMatrix {
+  --menu-color: #a3f7bf;
+  --icon-color: #5ef38c;
+  --hover-bg: #21bf73;
+  --hover-to: #0b8457;
+  --hover-text: #0f0f0f;
+  --bg-color: #0d0d0d;
+  --text-color: #d1ffe0;
+  --card-bg: #151515;
+}
+
+.theme-sunsetPeach {
+  --menu-color: #ffe4e1;
+  --icon-color: #ffb6b9;
+  --hover-bg: #ff9a8b;
+  --hover-to: #fad0c4;
+  --hover-text: #0f0f0f;
+  --bg-color: #fff1eb;
+  --text-color: #5c3d3d;
+  --card-bg: #ffefe9;
+}
+
+.theme-cyberGold {
+  --menu-color: #fff3b0;
+  --icon-color: #ffd700;
+  --hover-bg: #f59e0b;
+  --hover-to: #1e293b;
+  --hover-text: #ffffff;
+  --bg-color: #0f172a;
+  --text-color: #ffeaa7;
+  --card-bg: #1f2937;
+}
+
+.theme-forestNight {
+  --menu-color: #c7f9cc;
+  --icon-color: #95d5b2;
+  --hover-bg: #2d6a4f;
+  --hover-to: #1b4332;
+  --hover-text: #ffffff;
+  --bg-color: #081c15;
+  --text-color: #e9f5ee;
+  --card-bg: #102a23;
+}
+
+.theme-blushRose {
+  --menu-color: #ffe4e6;
+  --icon-color: #fecdd3;
+  --hover-bg: #fda4af;
+  --hover-to: #fbcfe8;
+  --hover-text: #000;
+  --bg-color: #fff0f6;
+  --text-color: #571c36;
+  --card-bg: #ffeef2;
+}
+
+.theme-aquaDream {
+  --menu-color: #e0f7fa;
+  --icon-color: #b2ebf2;
+  --hover-bg: #00bcd4;
+  --hover-to: #4dd0e1;
+  --hover-text: #000;
+  --bg-color: #e0f2f1;
+  --text-color: #004d40;
+  --card-bg: #ffffff;
+}
+
+.theme-midnightInk {
+  --menu-color: #d1d5db;
+  --icon-color: #9ca3af;
+  --hover-bg: #1f2937;
+  --hover-to: #374151;
+  --hover-text: #f1f5f9;
+  --bg-color: #0f172a;
+  --text-color: #e5e7eb;
+  --card-bg: #1e293b;
 }

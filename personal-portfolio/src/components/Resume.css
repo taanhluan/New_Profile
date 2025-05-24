@@ -1,33 +1,32 @@
-/* ===== Resume Section ===== */
+/* ===== Resume Wrapper ===== */
+.resume-page {
+  background-color: var(--bg-color);
+  padding: 40px 0;
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
 .resume-container {
-  padding: 40px 20px;
   max-width: 1100px;
   margin: 0 auto;
-  color: #f5f5f5;
+  padding: 40px 20px;
   font-family: 'Inter', 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #121212, #181818);
+  color: var(--text-color);
+  background-color: var(--bg-color); /* đảm bảo đồng bộ nền */
   animation: fadeInBody 0.8s ease-in-out;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@keyframes fadeInBody {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
+/* ===== Section Title ===== */
 .section-title {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 30px;
-  border-bottom: 4px solid #f97316;
   display: inline-block;
-  color: #ffffff;
+  color: var(--text-color);
   position: relative;
+  border-bottom: 4px solid var(--hover-bg);
 }
 
 .section-title::after {
@@ -37,20 +36,22 @@
   bottom: -8px;
   width: 60px;
   height: 3px;
-  background-color: #f97316;
-  box-shadow: 0 0 10px #f97316aa;
+  background-color: var(--hover-bg);
+  box-shadow: 0 0 10px var(--hover-bg);
 }
 
-/* ===== Roadmap Timeline Section ===== */
+/* ===== Timeline Container ===== */
 .timeline {
   display: flex;
   flex-direction: column;
   gap: 28px;
   position: relative;
   margin-top: 40px;
-  border-left: 2px solid rgba(255, 255, 255, 0.1);
   padding-left: 32px;
+  border-left: 2px solid rgba(255, 255, 255, 0.08); /* fallback */
+  border-left: 2px solid var(--timeline-border, rgba(255, 255, 255, 0.08)); /* theme override */
 }
+
 
 .timeline::before {
   content: "";
@@ -59,11 +60,12 @@
   left: 8px;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, #f97316, transparent);
+  background: linear-gradient(to bottom, var(--hover-bg), transparent);
 }
 
+/* ===== Timeline Item ===== */
 .timeline-item {
-  background-color: #1e1e1e;
+  background-color: var(--card-bg); /* sử dụng biến theme */
   border-radius: 10px;
   padding: 24px;
   position: relative;
@@ -74,7 +76,7 @@
 
 .timeline-item:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 6px 18px rgba(255, 151, 51, 0.4);
+  box-shadow: 0 6px 18px var(--hover-to);
 }
 
 .timeline-item::before {
@@ -84,41 +86,42 @@
   left: -38px;
   width: 20px;
   height: 20px;
-  background: #f97316;
+  background: var(--hover-bg);
   border: 2px solid #fff;
   border-radius: 50%;
-  box-shadow: 0 0 12px rgba(249, 115, 22, 0.5);
+  box-shadow: 0 0 12px var(--hover-bg);
   transition: transform 0.3s ease;
 }
 
 .timeline-item:hover::before {
   transform: scale(1.2);
-  box-shadow: 0 0 16px #f97316, 0 0 26px rgba(249, 115, 22, 0.6);
+  box-shadow: 0 0 16px var(--hover-bg), 0 0 26px var(--hover-to);
 }
 
+/* ===== Timeline Content ===== */
 .timeline-date {
   font-weight: bold;
   font-size: 14px;
-  color: #fb923c;
+  color: var(--hover-bg);
   margin-bottom: 6px;
 }
 
 .timeline-content h4 {
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-color);
   margin-bottom: 8px;
   line-height: 1.3;
 }
 
 .timeline-content p {
   font-size: 15px;
-  color: #ccc;
+  color: var(--text-color);
   line-height: 1.6;
   margin: 0;
 }
 
-/* ===== Sublogo (used inside roadmap) ===== */
+/* ===== Optional Logo Block ===== */
 .sub-projects {
   display: flex;
   flex-wrap: wrap;
@@ -135,13 +138,31 @@
   background: #fff;
   padding: 5px 8px;
   border-radius: 8px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 0 10px rgba(249, 115, 22, 0.4), 0 0 16px rgba(249, 115, 22, 0.2);
+  box-shadow:
+    0 1px 5px rgba(0, 0, 0, 0.12),
+    0 0 10px var(--hover-bg),
+    0 0 16px var(--hover-to);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sub-projects img:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25), 0 0 18px #f97316, 0 0 28px rgba(255, 145, 0, 0.5);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.25),
+    0 0 18px var(--hover-bg),
+    0 0 28px var(--hover-to);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInUp {
@@ -155,19 +176,24 @@
   }
 }
 
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .timeline {
     padding-left: 20px;
   }
+
   .timeline-item::before {
     left: -30px;
   }
+
   .timeline-item {
     padding: 20px;
   }
+
   .timeline-content h4 {
     font-size: 18px;
   }
+
   .timeline-content p {
     font-size: 14px;
   }
