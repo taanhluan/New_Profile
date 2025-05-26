@@ -201,3 +201,20 @@
     font-size: 13px;
   }
 }
+.highlight-animation {
+  font-weight: bold;
+  color: #FFD700; /* Màu vàng hoàng kim */
+  animation: pulseGold 1.5s infinite alternate;
+}
+
+@keyframes pulseGold {
+  0% {
+    text-shadow: 0 0 4px rgba(255, 215, 0, 0.4); /* ánh vàng nhẹ */
+    transform: scale(1);
+  }
+  100% {
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.9); /* ánh vàng mạnh */
+    transform: scale(1.04);
+  }
+}
+

@@ -1,0 +1,281 @@
+[
+ {
+    "title": "Futa Bus – IT Infrastructure & Support System",
+    "description": "IT support and infrastructure implementation across 200+ Futa Bus offices nationwide.",
+    "logo": "https://futabus.vn/_next/static/media/logo_new.8a0251b8.svg",
+    "overview": "Provided nationwide IT support for ticketing software, built and maintained hardware infrastructure, and contributed to CCTV monitoring systems.",
+    "techStack": [
+      "Windows Server",
+      "Networking (LAN/WAN)",
+      "Surveillance System (CCTV)",
+      "Ticketing Software Support"
+    ],
+    "role": "IT Support – maintaining software, hardware, and surveillance systems across 200+ branches.",
+    "features": [
+      "Troubleshooting ticketing software errors",
+      "Installing & maintaining over 200 computer systems",
+      "Deploying and managing office CCTV infrastructure"
+    ],
+    "security": "Local network configurations, access control via CCTV monitoring rooms",
+    "challenges": "Ensuring stability across distributed offices with varying network conditions",
+    "subLogos": [],
+    "startDate": "2014-01-01",
+    "endDate": "2016-12-31",
+    "github": "",
+    "website": "https://futabus.vn"
+  },
+  {
+  "title": "Prozy – Real Estate Infrastructure & CRM System",
+  "description": "IT infrastructure and support for CRM and real estate operation system at Prozy.",
+  "logo": "https://propzy.net/wp-content/uploads/2024/03/propzy-logo.png",
+  "subLogos": [],
+  "overview": "Contributed to building IT infrastructure, call center systems, and inventory monitoring for Prozy's real estate digital platform.",
+  "techStack": [
+    "Linux Server",
+    "Zabbix Monitoring",
+    "Call Center (VoIP)",
+    "Inventory Management Tools"
+  ],
+  "role": "IT Infrastructure Support – deployed and monitored systems, supported CRM infrastructure and internal tools.",
+  "features": [
+    "Set up and managed inventory & monitoring systems",
+    "Deployed and maintained call center infrastructure",
+    "Collaborated with tech teams to ensure system uptime"
+  ],
+  "security": "Internal network configuration, monitoring alerts, and access control",
+  "challenges": "Ensuring real-time monitoring and system reliability during fast company scale-up",
+  "startDate": "2016",
+  "endDate": "2017",
+  "github": "",
+  "website": ""
+},
+  {
+  "title": "Maersk Line – Logistics IT Infrastructure & Cyber Recovery",
+  "description": "Network engineering, CRM enhancement, and cybersecurity response during Maersk’s global ransomware incident.",
+  "logo": "https://raw.githubusercontent.com/taanhluan/JonathanTa/5ce7dbef8cd83ca918b9720fc6e266f541346b55/assets/images/Maersk_idmLq7axTs_0.svg",
+  "subLogos": [
+    "data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNDEyLjM4IDIwNCI+PGRlZnM+PHN0eWxlPi5jbHMtMSwuY2xzLTJ7ZmlsbC1ydWxlOmV2ZW5vZGQ7fS5jbHMtMXtmaWxsOnVybCgjbGluZWFyLWdyYWRpZW50KTt9LmNscy0ye2ZpbGw6I2ZmZjt9PC9zdHlsZT48bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9IjIwNi4xOSIgeDI9IjIwNi4xOSIgeTI9IjIwNCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwYjhmMSIvPjxzdG9wIG9mZnNldD0iMC4wMiIgc3RvcC1jb2xvcj0iIzAxYjZmMCIvPjxzdG9wIG9mZnNldD0iMC4zMSIgc3RvcC1jb2xvcj0iIzBkOTBkOSIvPjxzdG9wIG9mZnNldD0iMC41OCIgc3RvcC1jb2xvcj0iIzE3NzVjOCIvPjxzdG9wIG9mZnNldD0iMC44MiIgc3RvcC1jb2xvcj0iIzFjNjViZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzFlNWZiYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjx0aXRsZT5TQVBfZ3JhZF9SX3Njcm5fWmVpY2hlbmZsw6RjaGUgMTwvdGl0bGU+PHBvbHlsaW5lIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIwIDIwNCAyMDguNDEgMjA0IDQxMi4zOCAwIDAgMCAwIDIwNCIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTI0NC43MywzOC4zNmwtNDAuNiwwdjk2LjUyTDE2OC42NywzOC4zM0gxMzMuNTFsLTMwLjI3LDgwLjcyQzEwMCw5OC43LDc5LDkxLjY3LDYyLjQsODYuNCw1MS40Niw4Mi44OSwzOS44NSw3Ny43Miw0MCw3MmMuMDktNC42OCw2LjIzLTksMTguMzgtOC4zOCw4LjE3LjQzLDE1LjM3LDEuMDksMjkuNzEsOGwxNC4xLTI0LjU1Qzg5LjA2LDQwLjQyLDcxLDM2LjIxLDU2LjE3LDM2LjE5aC0uMDljLTE3LjI4LDAtMzEuNjgsNS42LTQwLjYsMTQuODNBMzQuMjMsMzQuMjMsMCwwLDAsNS43Nyw3NC43QzUuNTQsODcuMTUsMTAuMTEsOTYsMTkuNzEsMTAzYzguMSw1Ljk0LDE4LjQ2LDkuNzksMjcuNiwxMi42MiwxMS4yNywzLjQ5LDIwLjQ3LDYuNTMsMjAuMzYsMTNBOS41Nyw5LjU3LDAsMCwxLDY1LDEzNWMtMi44MSwyLjktNy4xMyw0LTEzLjA5LDQuMS0xMS40OS4yNC0yMC0xLjU2LTMzLjYxLTkuNTlMNS43NywxNTQuNDJhOTMuNzcsOTMuNzcsMCwwLDAsNDYsMTIuMjJsMi4xMSwwYzE0LjI0LS4yNSwyNS43NC00LjMxLDM0LjkyLTExLjcxLjUzLS40MSwxLS44NCwxLjQ5LTEuMjhMODYuMTcsMTY0LjVIMTIzbDYuMTktMTguODJhNjcuNDYsNjcuNDYsMCwwLDAsMjEuNjgsMy40Myw2OC4zMyw2OC4zMywwLDAsMCwyMS4xNi0zLjI1bDYsMTguNjRoNjAuMTR2LTM5aDEzLjExYzMxLjcxLDAsNTAuNDYtMTYuMTUsNTAuNDYtNDMuMkMzMDEuNzQsNTIuMTksMjgzLjUyLDM4LjM2LDI0NC43MywzOC4zNlpNMTUwLjkxLDEyMWEzNi45MywzNi45MywwLDAsMS0xMy0yLjI4bDEyLjg3LTQwLjU5SDE1MWwxMi42NSw0MC43MUEzOC41LDM4LjUsMCwwLDEsMTUwLjkxLDEyMVptOTYuMi0yMy4zM2gtOC45NFY2NC45MWg4Ljk0YzExLjkzLDAsMjEuNDQsNCwyMS40NCwxNi4xNCwwLDEyLjYtOS41MSwxNi41Ny0yMS40NCwxNi41NyIvPjwvc3ZnPg==",
+    "https://a.sfdcstatic.com/shared/images/c360-nav/salesforce-no-type-logo.svg"
+  ],
+  "overview": "Supported IT infrastructure, Salesforce CRM, and participated in global cyber recovery efforts after the ransomware attack on Maersk’s systems.",
+  "techStack": [
+    "Cisco VoIP",
+    "Windows & Linux Server",
+    "Network Security",
+    "SAP ERP",
+    "Salesforce CRM"
+  ],
+  "role": "IT Support & Infrastructure Engineer – handled network restoration, SAP recovery, and post-attack system reconfiguration.",
+  "features": [
+    "Network setup and hardening across regional offices",
+    "Supported SAP ERP and Salesforce CRM recovery",
+    "Coordinated system rebuilds after ransomware attack",
+    "Technical documentation and infrastructure diagrams",
+    "Collaborated with global IT to ensure business continuity"
+  ],
+  "security": "Firewall reconfiguration, system patching, endpoint protection after NotPetya ransomware",
+  "challenges": "Responding to and recovering from the global ransomware (NotPetya) attack that severely impacted Maersk's IT operations",
+  "startDate": "2017",
+  "endDate": "2018",
+  "github": "",
+  "website": ""
+},
+  {
+  "title": "Home Credit Vietnam – Collection & Mobile Communication System (MUCH)",
+  "description": "Developed collection and workforce communication system (MUCH) to manage 500+ field agents, integrated with Loxon and Genesys solutions.",
+  "logo": "https://www.homecredit.vn/static/2de334676802a591f9444bb556bd334f/f30c4/Microsoft_Teams_image_30_1_1_394b27a905.webp",
+  "subLogos": [
+    "https://www.loxon.eu/wp-content/themes/loxon-2022/assets/dist/img/header-logo.svg",
+    "https://astah.net/wp-content/uploads/2019/07/Astah_blue.svg",
+    "https://www.genesys.com/wp-content/themes/genesys-kraken/logo/genesys-com-full-color.svg"
+  ],
+  "overview": "Home Credit Vietnam pioneered the MUCH platform to optimize collection operations, unify communication, and monitor productivity of nationwide field agents.",
+  "techStack": [
+    "MUCH (Mobile Unify Communication Hub)",
+    "Loxon",
+    "Genesys Calling Solution",
+    "Astah",
+    "Oracle Database"
+  ],
+  "role": "Business Analyst – led system design, data structure planning, and coordinated implementation across departments.",
+  "features": [
+    "Designed features: result submission, shift scheduling, routing, auto contract assignment, reconciliation",
+    "Structured the data model and collector tables in Oracle",
+    "Coordinated integration with Loxon and Genesys call center",
+    "Created diagrams and process flows using Astah",
+    "Traveled to Prague (Czech Republic) to present the solution to global teams"
+  ],
+  "security": "Internal access controls, audit trail for field submissions, secure integration with external systems",
+  "challenges": "Standardizing field collection operations and scaling system to manage 500+ agents nationwide under real-time constraints",
+  "startDate": "2018",
+  "endDate": "2020",
+  "github": "",
+  "website": ""
+},
+ {
+  "title": "JACCS Vietnam – Credit Card System Integration",
+  "description": "Integrated VISA, MasterCard, and 3D Secure protocols into JACCS credit card management system.",
+  "logo": "https://jaccs.com.vn/wp-content/uploads/2020/03/logo_jaccs.png",
+  "subLogos": [
+    "https://cdn.visa.com/v2/assets/images/logos/visa/blue/logo.png",
+    "https://www.mastercard.com.vn/content/dam/public/mastercardcom/vn/vi/logos/mc-logo-52.svg"
+  ],
+  "overview": "JACCS Vietnam implemented a credit card platform with secure integration to VISA and MasterCard using 3D Secure authentication to enhance transaction protection.",
+  "techStack": [
+    "Java (Spring)",
+    "Oracle Database",
+    "3D Secure Protocol",
+    "Visa/MasterCard API",
+    "IBM WebSphere"
+  ],
+  "role": "Business Analyst – led integration requirement planning and collaborated with international payment gateway providers.",
+  "features": [
+    "Collected and documented requirements for VISA & MasterCard 3D Secure integration",
+    "Analyzed existing card management workflows and designed integration blueprint",
+    "Supported SIT/UAT testing with banking and payment gateway teams",
+    "Defined exception handling, fraud monitoring, and fallback procedures",
+    "Worked with external stakeholders from Visa, Mastercard, and local banks"
+  ],
+  "security": "Compliance with PCI-DSS, 3D Secure authentication (ACS, MPI), and encrypted transaction flows",
+  "challenges": "Ensuring strict compliance with international security standards and aligning JACCS infrastructure with global payment networks",
+  "startDate": "2021",
+  "endDate": "2022",
+  "github": "",
+  "website": ""
+},
+  {
+    "title": "Amaris Consulting – FECredit, Manulife, Prudential",
+    "description": "Led PEGA LOS for FECredit, CRM Web/Mobile for Manulife, and back office for Prudential.",
+    "logo": "https://raw.githubusercontent.com/taanhluan/JonathanTa/b03ec13dd1527adab94b8029cdf371e49a2c08a5/assets/images/idqov3ArM6_1747983073317.svg",
+    "subLogos": [
+      "https://fecredit.com.vn/wp-content/themes/fe-credit/assets/home/images/logo-vn.png",
+      "https://raw.githubusercontent.com/taanhluan/JonathanTa/b08030e877198ace7a49ec0a868fac99b081273d/assets/images/Manulife%20Financial%20logo.svg",
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/trang-chu/prudential-logo-181x32.png"
+    ],
+    "overview": "Amaris Consulting – FECredit, Manulife, Prudential focuses on delivering efficient digital solutions tailored for industry-specific challenges.",
+    "techStack": [
+      "React",
+      "Node.js"
+    ],
+    "role": "Business Analyst – supported end-to-end feature delivery and stakeholder communication",
+    "features": [
+      "Requirement gathering & documentation",
+      "Workflow analysis and process improvement",
+      "Collaboration with cross-functional teams"
+    ],
+    "security": "Standard security practices for enterprise applications",
+    "challenges": "Adapting to changing business requirements under tight deadlines",
+    "startDate": "2023-01-01",
+    "endDate": "",
+    "github": "",
+    "website": ""
+  },
+  {
+    "title": "FPT Software – GE, Canon Projects",
+    "description": "System analysis for GE; CRM and virtual meta class systems for Canon.",
+    "logo": "https://fptsoftware.com/-/media/project/fpt-software/fso/uplift/home/logo_fpt_text_white.png?extension=webp&modified=20240110084110",
+    "subLogos": [
+      "https://raw.githubusercontent.com/taanhluan/JonathanTa/9f362d02d65549bccfd063bfe74e9f662f23d246/assets/images/General_Electric-Logo.wine.svg",
+      "https://www.usa.canon.com/etc.clientlibs/canon/clientlibs/clientlib-base/resources/images/header/canon-logo-red.svg"
+    ],
+    "overview": "FPT Software – GE, Canon Projects focuses on delivering efficient digital solutions tailored for industry-specific challenges.",
+    "techStack": [
+      "React",
+      "Node.js"
+    ],
+    "role": "Business Analyst – supported end-to-end feature delivery and stakeholder communication",
+    "features": [
+      "Requirement gathering & documentation",
+      "Workflow analysis and process improvement",
+      "Collaboration with cross-functional teams"
+    ],
+    "security": "Standard security practices for enterprise applications",
+    "challenges": "Adapting to changing business requirements under tight deadlines",
+    "startDate": "2023-01-01",
+    "endDate": "",
+    "github": "",
+    "website": ""
+  },
+  {
+    "title": "Xebia – ABBank",
+    "description": "Backbase and T24 banking transformation, UX redesign, onboarding processes.",
+    "logo": "https://raw.githubusercontent.com/taanhluan/JonathanTa/9f362d02d65549bccfd063bfe74e9f662f23d246/assets/images/idhOfvYsS__1735116558887.svg",
+    "subLogos": [
+      "https://abbank.vn/uploads/images/2020/09/28/logo.png"
+    ],
+    "overview": "Xebia – ABBank focuses on delivering efficient digital solutions tailored for industry-specific challenges.",
+    "techStack": [
+      "React",
+      "Node.js"
+    ],
+    "role": "Business Analyst – supported end-to-end feature delivery and stakeholder communication",
+    "features": [
+      "Requirement gathering & documentation",
+      "Workflow analysis and process improvement",
+      "Collaboration with cross-functional teams"
+    ],
+    "security": "Standard security practices for enterprise applications",
+    "challenges": "Adapting to changing business requirements under tight deadlines",
+    "startDate": "2023-01-01",
+    "endDate": "",
+    "github": "",
+    "website": ""
+  },
+  {
+    "title": "GTV Vietnam – Corporate & Retail Digital Banking",
+    "description": "Led product strategy and AML integration across T24 & Backbase platforms for corporate and retail users.",
+    "logo": "https://www.greentechventures.co.th/storage/logo/logo.svg",
+    "subLogos": [
+      "https://github.com/taanhluan/JonathanTa/blob/main/assets/images/download.png?raw=true"
+    ],
+    "overview": "GTV Vietnam – Corporate & Retail Digital Banking focuses on delivering efficient digital solutions tailored for industry-specific challenges.",
+    "techStack": [
+      "React",
+      "Node.js"
+    ],
+    "role": "Business Analyst – supported end-to-end feature delivery and stakeholder communication",
+    "features": [
+      "Requirement gathering & documentation",
+      "Workflow analysis and process improvement",
+      "Collaboration with cross-functional teams"
+    ],
+    "security": "Standard security practices for enterprise applications",
+    "challenges": "Adapting to changing business requirements under tight deadlines",
+    "startDate": "2023-01-01",
+    "endDate": "",
+    "github": "",
+    "website": ""
+  },
+  {
+    "title": "Axon Active – Mortgage Lending Platform (Migros Bank)",
+    "description": "Defined digital mortgage workflows including ZEK integration and affordability simulation.",
+    "logo": "https://github.com/taanhluan/JonathanTa/blob/main/assets/images/dc7825_2b761e03b89d4493a1d02c2ff8ddc080~mv2.png?raw=true",
+    "subLogos": [
+      "https://raw.githubusercontent.com/taanhluan/JonathanTa/342ea74970f9b71dedf16c490cebc4ffd38b7c47/assets/images/Migros%20Bank_idMSnP4zvv_0.svg"
+    ],
+    "overview": "Led the delivery of digital banking solutions for Migros Bank, ensuring alignment with strategic objectives and stakeholder expectations in a regulated financial environment.",
+    "techStack": [
+      "React",
+      "Node.js",
+      "Java",
+      "Spring Boot",
+      "Azure"
+    ],
+    "role": "Product Owner – driving delivery and strategic alignment for Migros Bank",
+    "features": [
+      "Agile team leadership across multiple squads",
+      "Backlog ownership and prioritization",
+      "Sprint planning and retrospective facilitation",
+      "Stakeholder communication and alignment",
+      "KPI definition and tracking",
+      "User story & acceptance criteria development",
+      "Roadmap contribution for digital transformation"
+    ],
+    "security": "Banking-grade compliance, audit, and access control",
+    "challenges": "Managing stakeholder expectations in a regulated financial environment",
+    "startDate": "2023-01-01",
+    "endDate": "",
+    "github": "",
+    "website": ""
+  }
+]

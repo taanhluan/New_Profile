@@ -40,7 +40,7 @@
   height: 100px;
   border-radius: 50%;
   border: 3px solid var(--hover-bg);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 4px rgba(39, 30, 30, 0.08);
   margin-bottom: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
 }

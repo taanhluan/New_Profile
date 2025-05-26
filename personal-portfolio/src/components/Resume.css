@@ -12,11 +12,10 @@
   padding: 40px 20px;
   font-family: 'Inter', 'Segoe UI', sans-serif;
   color: var(--text-color);
-  background-color: var(--bg-color); /* đảm bảo đồng bộ nền */
+  background-color: var(--bg-color);
   animation: fadeInBody 0.8s ease-in-out;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 
 /* ===== Section Title ===== */
 .section-title {
@@ -40,7 +39,7 @@
   box-shadow: 0 0 10px var(--hover-bg);
 }
 
-/* ===== Timeline Container ===== */
+/* ===== Timeline (for Resume) ===== */
 .timeline {
   display: flex;
   flex-direction: column;
@@ -48,10 +47,8 @@
   position: relative;
   margin-top: 40px;
   padding-left: 32px;
-  border-left: 2px solid rgba(255, 255, 255, 0.08); /* fallback */
-  border-left: 2px solid var(--timeline-border, rgba(255, 255, 255, 0.08)); /* theme override */
+  border-left: 2px solid rgba(255, 255, 255, 0.08);
 }
-
 
 .timeline::before {
   content: "";
@@ -63,9 +60,8 @@
   background: linear-gradient(to bottom, var(--hover-bg), transparent);
 }
 
-/* ===== Timeline Item ===== */
 .timeline-item {
-  background-color: var(--card-bg); /* sử dụng biến theme */
+  background-color: var(--card-bg);
   border-radius: 10px;
   padding: 24px;
   position: relative;
@@ -98,7 +94,6 @@
   box-shadow: 0 0 16px var(--hover-bg), 0 0 26px var(--hover-to);
 }
 
-/* ===== Timeline Content ===== */
 .timeline-date {
   font-weight: bold;
   font-size: 14px;
@@ -121,7 +116,7 @@
   margin: 0;
 }
 
-/* ===== Optional Logo Block ===== */
+/* ===== Project Logos (Main + Sub) ===== */
 .sub-projects {
   display: flex;
   flex-wrap: wrap;
@@ -153,6 +148,41 @@
     0 0 28px var(--hover-to);
 }
 
+/* ===== Modal Styles ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeInOverlay 0.3s ease;
+}
+
+.modal-content {
+  background: #1e1e1e;
+  color: #f5f5f5;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  animation: scaleIn 0.4s ease;
+  box-shadow: 0 0 20px var(--hover-bg);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 /* ===== Animations ===== */
 @keyframes fadeInBody {
   from {
@@ -173,6 +203,22 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -197,4 +243,24 @@
   .timeline-content p {
     font-size: 14px;
   }
+
+  .modal-content {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .modal-close {
+    font-size: 20px;
+  }
+}
+
+.modal-content h2 {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  background: linear-gradient(to right, #f97316, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 6px rgba(249, 115, 22, 0.5);
 }
