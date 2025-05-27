@@ -1,4 +1,27 @@
-/* ===== Base Sidebar Container ===== */
+/* ===== Reset & Base Style ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+}
+
+/* ===== App Container ===== */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  transition: filter 0.3s ease;
+  position: relative;
+}
+
+/* ===== Sidebar (Desktop) ===== */
 .sidebar {
   width: 250px;
   height: 100vh;
@@ -154,17 +177,55 @@
   color: var(--menu-color);
 }
 
-/* ===== Responsive Mobile ===== */
+/* ===== Tablet & Small Laptop (769px – 1024px) ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+    padding: 20px 10px;
+  }
+
+  .main-content {
+    margin-left: 220px;
+    padding: 30px;
+  }
+
+  .nav-menu li a {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* ===== Large Screen (≥ 1280px) ===== */
+@media (min-width: 1280px) {
+  .main-content {
+    max-width: 1200px;
+    margin-left: 250px;
+    margin-right: auto;
+  }
+
+  .portfolio,
+  .resume-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
+
+/* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
   .sidebar {
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    padding: 10px 0;
-    border-bottom: 1px solid #4c1d95;
+    position: fixed;
     top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1050;
   }
 
   .avatar-box {
@@ -175,7 +236,7 @@
     flex-direction: column;
     align-items: stretch;
     gap: 4px;
-    padding: 10px 0;
+    padding: 60px 0 10px;
   }
 
   .nav-menu li a {
@@ -188,4 +249,60 @@
   .theme-toggle {
     display: none;
   }
+
+  .hamburger {
+    display: block;
+  }
+
+  .app-container.sidebar-open .sidebar {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+    margin-top: 60px;
+  }
+
+  .app-container.sidebar-open .main-content {
+    filter: brightness(0.6);
+    pointer-events: none;
+  }
+}
+
+/* ===== Hamburger Button ===== */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 18px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--hover-to);
+  z-index: 1100;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.2);
+}
+
+.hamburger i {
+  font-size: 24px;
+  pointer-events: none;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+  margin-left: 250px;
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  color: var(--text-color);
+  transition: margin 0.3s ease;
+  position: relative;
+  z-index: 1;
+  background-color: var(--bg-color);
 }

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
 
-const fullText = `Hello, I am Jonathan Ta,
-a Product Owner and Digital Consultant based in Vietnam. I specialize in leading the development of scalable digital products and complex banking systems, delivering strategy-driven user experience solutions that align with organizational objectives and drive business growth.`;
+const fullText = `Hi, I'm Jonathan Product Owner & Digital Consultant.
+I craft digital products and simplify banking tech.`;
+
+
 
 const Home: React.FC = () => {
   const [text, setText] = useState('');

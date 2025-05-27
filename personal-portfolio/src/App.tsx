@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Home from './components/Home';
 import AboutMe from './components/AboutMe';
@@ -15,13 +15,8 @@ const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
-  const toggleSidebar = () => {
-    setSidebarOpen((prev) => !prev);
-  };
-
-  const closeSidebar = () => {
-    setSidebarOpen(false);
-  };
+  const toggleSidebar = () => setSidebarOpen((prev) => !prev);
+  const closeSidebar = () => setSidebarOpen(false);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -37,11 +32,8 @@ const App: React.FC = () => {
         closeSidebar();
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [sidebarOpen]);
 
   const sidebarProps = {
